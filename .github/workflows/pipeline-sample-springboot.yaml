@@ -62,7 +62,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/hello-spring-boot:latest # Docker Hub
+            ${{ secrets.DOCKER_USERNAME }}/hello-spring-boot:latest 
             ghcr.io/${{ github.repository }}:latest # GitHub Container Registry
           cache-from: type=gha
           cache-to: type=gha,mode=max
