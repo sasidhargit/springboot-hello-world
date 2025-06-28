@@ -31,7 +31,7 @@ jobs:
       - name: SonarQube Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.INT_TOKEN }} # Required for GitHub integration
+          GITHUB_TOKEN: ${{ secrets.INT_TOKEN2 }} # Required for GitHub integration
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Your SonarCloud token
         with:
           # You need to configure these for your SonarCloud project
