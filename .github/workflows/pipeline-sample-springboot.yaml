@@ -9,7 +9,7 @@ jobs:
   build-and-scan-and-push:
     runs-on: ubuntu-latest
     env:
-      SONAR_SCANNER_VERSION: 4.0.0 # Specify SonarQube Scanner version
+      SONAR_SCANNER_VERSION: 4.8 # Specify SonarQube Scanner version
 
     steps:
       - name: Checkout code
@@ -29,7 +29,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@v4.0.0
+        uses: sonarsource/sonarqube-scan-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.INT_TOKEN2 }} # Required for GitHub integration
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Your SonarCloud token
